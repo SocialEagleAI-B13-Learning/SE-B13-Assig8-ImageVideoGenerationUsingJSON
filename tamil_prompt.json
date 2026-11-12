@@ -1,0 +1,116 @@
+{
+  "template_name": "Tamil Cultural Scene Generator",
+  "version": "1.0",
+  "scene_context": {
+    "location": "Karaikudi, Chettinad region, Sivaganga district, Tamil Nadu, India",
+    "period": "Contemporary Tamil Nadu, 2026",
+    "occasion": "Margazhi season",
+    "moment": "A quiet early morning kolam-making ritual in a traditional Chettinad home"
+  },
+  "image_prompt": {
+    "subject": "A young Tamil woman drawing an intricate traditional white rice-flour kolam at the entrance of her family home",
+    "setting": "A Chettinad heritage mansion courtyard in Karaikudi, with carved teak pillars, a traditional tiled roof, Athangudi floor tiles and a wooden main doorway",
+    "time_of_day": "Early morning, approximately 6:00 AM, during Margazhi",
+    "lighting": "Soft golden sunrise light with gentle natural shadows and a faint cool morning atmosphere",
+    "camera": {
+      "shot": "Wide environmental portrait",
+      "angle": "Eye level, slightly diagonal view across the courtyard",
+      "lens": "35mm",
+      "depth_of_field": "Natural moderate depth of field; architecture and kolam remain recognisable"
+    },
+    "palette": [
+      "terracotta",
+      "aged teak brown",
+      "warm cream",
+      "kolam white",
+      "deep maroon",
+      "muted green"
+    ],
+    "style": "Photorealistic documentary photography, culturally grounded, natural and understated",
+    "aspect_ratio": "16:9",
+    "cultural_details": [
+      "Chettinad architectural proportions and carved teak details",
+      "Athangudi patterned tiles used appropriately as flooring",
+      "Traditional Kandangi cotton saree in a restrained Chettinad colour combination",
+      "Fresh jasmine flowers worn in the woman's hair",
+      "Kolam drawn with rice flour, with believable hand-drawn symmetry",
+      "A brass kuthu vilakku placed naturally near the entrance"
+    ],
+    "avoid": [
+      "Generic North Indian or Rajasthani architecture",
+      "Thanjavur temple architecture in place of a Chettinad mansion",
+      "Generic synthetic bridal sari or inaccurate Kanchipuram silk",
+      "Oversized or physically impossible kolam patterns",
+      "Modern buildings, cars or plastic decorations",
+      "Tourist-postcard composition",
+      "Exaggerated festival clichés",
+      "Cartoon or fantasy styling",
+      "Text, captions, logos or watermarks",
+      "Extra fingers, distorted hands or malformed faces"
+    ]
+  },
+  "image_variations": [
+    {
+      "id": "image_1",
+      "description": "Base scene: a woman drawing kolam in a Chettinad courtyard at Margazhi dawn",
+      "change_only": [],
+      "overrides": {}
+    },
+    {
+      "id": "image_2",
+      "description": "Same scene and composition, with a mother gently guiding her daughter as she completes the kolam",
+      "change_only": [
+        "subject"
+      ],
+      "overrides": {
+        "subject": "A Tamil mother gently guiding her young daughter as the daughter draws an intricate white rice-flour kolam in the same Chettinad courtyard"
+      }
+    },
+    {
+      "id": "image_3",
+      "description": "Same subject and setting, photographed in cooler blue-hour light before sunrise",
+      "change_only": [
+        "time_of_day",
+        "lighting"
+      ],
+      "overrides": {
+        "time_of_day": "Blue hour, approximately 5:30 AM, during Margazhi",
+        "lighting": "Cool pre-sunrise ambient light balanced by the warm glow of a single brass oil lamp"
+      }
+    }
+  ],
+  "video_prompt": {
+    "use_image_prompt_as_base": true,
+    "duration_seconds": 5,
+    "aspect_ratio": "16:9",
+    "motion": {
+      "subject_motion": "The woman slowly moves her hand to add the final curves of the kolam",
+      "environment_motion": "A very gentle morning breeze moves a few jasmine flowers and nearby leaves",
+      "lighting_motion": "The brass oil-lamp flame flickers subtly",
+      "camera_motion": "A slow, smooth cinematic push-in; keep the architecture and subject consistent"
+    },
+    "continuity": [
+      "Preserve the same woman, clothing, architecture, kolam design and object positions throughout",
+      "Use realistic human hand movement",
+      "Keep motion restrained and observational"
+    ],
+    "avoid": [
+      "Sudden camera cuts",
+      "Rapid zooms or artificial transitions",
+      "Changing the woman's face or clothing between frames",
+      "Morphing architecture or kolam patterns",
+      "Exaggerated wind or flame movement",
+      "Added text, logos or watermarks"
+    ]
+  },
+  "generation_notes": {
+    "workflow": [
+      "Generate image_1 using image_prompt without overrides.",
+      "Generate image_2 using the same image_prompt and apply only the image_2 overrides.",
+      "Generate image_3 using the same image_prompt and apply only the image_3 overrides.",
+      "Generate the short video using image_prompt as the base and add video_prompt.motion and video_prompt.continuity."
+    ],
+    "consistency_rule": "For each image variation, keep every field unchanged unless it is explicitly listed in change_only and overrides.",
+    "tool_note": "If the image or video tool accepts structured JSON, provide the relevant object. If it accepts only text, paste the JSON object or convert its fields into a prompt."
+  }
+}
